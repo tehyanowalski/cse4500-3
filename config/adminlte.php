@@ -407,3 +407,4 @@ return [
 
     'livewire' => false,
 ]
+]
