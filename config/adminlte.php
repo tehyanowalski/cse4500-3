@@ -406,4 +406,4 @@ return [
     */
 
     'livewire' => false,
-];
+]
