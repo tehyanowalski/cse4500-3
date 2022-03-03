@@ -1,5 +1,5 @@
 <?php
-$events = array[
+$events-feed = array[
     {
       "title": "CSE4500 Class",
       "start": "2022-02-23T17:30:00",
@@ -12,5 +12,5 @@ $events = array[
     },   
   ];
 
-echo json_encode($events);
+echo json_encode($events-feed);
 ?>
