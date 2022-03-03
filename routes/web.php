@@ -40,3 +40,8 @@ Route::get('/db-test', function () {
         echo 'None';
     }
 });
+
+Route::get('/db_migrate', function () {
+    Artisan::call('migrate');
+    echo Artisan::output();
+});
