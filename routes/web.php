@@ -46,6 +46,6 @@ Route::get('/db_migrate', function () {
     echo Artisan::output();
 });
 
-Route::fallback(function () {
-    return view('navbar-search');
+Route::fallback('/navbar-search', function () {
+    return view('fallback');
 });
