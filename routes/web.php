@@ -45,3 +45,7 @@ Route::get('/db_migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
 });
+
+Route::get('/', function () {
+    return view('events');
+});
