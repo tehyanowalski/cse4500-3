@@ -47,5 +47,5 @@ Route::get('/db_migrate', function () {
 });
 
 Route::get('/', function () {
-    return view('events');
+    return view('events-feed');
 });
