@@ -47,5 +47,5 @@ Route::get('/db_migrate', function () {
 });
 
 Route::fallback('/navbar-search', function () {
-    return view('fallback');
+    return view('adminlte');
 });
