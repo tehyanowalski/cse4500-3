@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('todos');
 });
 
-Route::get('/', function () {
+Route::get('/events-feed', function () {
     return view('calendar');
 });
 
@@ -44,8 +44,4 @@ Route::get('/db-test', function () {
 Route::get('/db_migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
-});
-
-Route::get('/', function () {
-    return view('events-feed');
 });
