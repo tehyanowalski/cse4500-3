@@ -47,4 +47,5 @@ Route::get('/db_migrate', function () {
 });
 
 Route::fallback(function () {
+    return 'Hm, how did you land here somehow?';
 });
