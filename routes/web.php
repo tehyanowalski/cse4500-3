@@ -46,6 +46,5 @@ Route::get('/db_migrate', function () {
     echo Artisan::output();
 });
 
-Route::fallback('/navbar-search', function () {
-    return view('adminlte');
+Route::fallback(function () {
 });
