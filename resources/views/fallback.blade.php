@@ -5,30 +5,39 @@
 @stop
 
 @section('content')
-    <p><title>
-                Page not found            </title>
+    <div class="content-wrapper ">
 
     
+            <div class="content-header">
+            <div class="container-fluid">
+                    <h1>Error</h1>
+            </div>
+        </div>
     
     
-            <link rel="stylesheet" href="https://cse4500-laravel9.herokuapp.com//vendor/fontawesome-free/css/all.min.css">
-        <link rel="stylesheet" href="https://cse4500-laravel9.herokuapp.com//vendor/overlayScrollbars/css/OverlayScrollbars.min.css">
-
-        
-        <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
-            
-                            
-        <link rel="stylesheet" href="https://cse4500-laravel9.herokuapp.com//vendor/adminlte/dist/css/adminlte.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    
-    
-    
-    
-            
-    
-    
-</head>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="error-page">
+<h2 class="headline text-warning"> 404</h2>
+<div class="error-content">
+<h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Page not found.</h3>
+<p>
+ We could not find the page you were looking for.
+Meanwhile, you may <a href="/">return to dashboard</a> or try using the search form.
 </p>
+<form class="search-form">
+<div class="input-group">
+<input type="text" name="search" class="form-control" placeholder="Search">
+<div class="input-group-append">
+<button type="submit" name="submit" class="btn btn-warning"><i class="fas fa-search"></i>
+</button>
+</div>
+</div>
+
+</form>
+</div>
+
+</div>
 @stop
 
 @section('css')
