@@ -1,4 +1,4 @@
-@section('title', 'fallback')
+@section('adminlte', 'fallback')
 
 @section('content_header')
     <h1>ERROR</h1>
