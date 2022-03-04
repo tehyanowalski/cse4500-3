@@ -1,4 +1,4 @@
-@section('adminlte', 'fallback')
+@section(adminlte::fallback)
 
 @section('content_header')
     <h1>ERROR</h1>
@@ -10,7 +10,7 @@
     
             <div class="content-header">
             <div class="container-fluid">
-                    <h1>Error</h1>
+                    <h1>ERROR</h1>
             </div>
         </div>
     
