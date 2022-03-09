@@ -46,6 +46,6 @@ Route::get('/db_migrate', function () {
     echo Artisan::output();
 });
 
-Route::fallback('/404', function () {
+Route::fallback(function () {
     return view ('404');
 });
