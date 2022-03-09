@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
 URL::forceScheme('https');
 
-Route::get('/', function () {
+Route::get('/todos', function () {
     return view('todos');
 });
 
@@ -27,7 +27,7 @@ Route::get('/events-feed', function () {
     return view('calendar');
 });
 
-Route::get('/', function () {
+Route::get('/board', function () {
     return view('board');
 });
 
@@ -47,4 +47,5 @@ Route::get('/db_migrate', function () {
 });
 
 Route::fallback(function () {
+    return view ('404');
 });
