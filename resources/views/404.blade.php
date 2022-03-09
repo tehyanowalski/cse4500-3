@@ -1,4 +1,4 @@
-@section(adminlte::fallback)
+@section(adminlte::404)
 
 @section('content_header')
     <h1>ERROR</h1>
