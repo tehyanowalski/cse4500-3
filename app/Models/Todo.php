@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+protected $fillable = ['title','progress'];
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
