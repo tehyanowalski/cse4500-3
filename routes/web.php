@@ -58,4 +58,5 @@ Route::get('/db_migrate', function () {
 Route::resource('/todos', TodoController::class);
 
 Route::fallback(function () {
+    return view('fallback');
 });
