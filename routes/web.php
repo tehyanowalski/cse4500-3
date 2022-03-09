@@ -55,5 +55,4 @@ Route::get('/db_migrate', function () {
 });
 
 Route::fallback(function () {
-    return view('fallback');
 });
