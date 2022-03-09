@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
 URL::forceScheme('https');
 
-Route::get('/todos', function () {
+Route::get('/', function () {
     return view('todos');
 });
 
@@ -27,7 +27,7 @@ Route::get('/events-feed', function () {
     return view('calendar');
 });
 
-Route::get('/board', function () {
+Route::get('/', function () {
     return view('board');
 });
 
