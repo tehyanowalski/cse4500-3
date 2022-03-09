@@ -41,6 +41,14 @@ Route::get('/db-test', function () {
     }
 });
 
+Route::get('/db-test', function () {
+    try {         
+         echo \DB::connection()->getDatabaseName();     
+    } catch (\Exception $e) {
+          echo 'None';
+    }
+});
+
 Route::get('/db_migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
