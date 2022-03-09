@@ -17,6 +17,16 @@
         </tr>
       </thead>
       <tbody>
+      
+      @foreach($todos AS $todo)
+        <tr>
+          <td>{{ $todo->id }}</td>
+          <td>{{ $todo->title }}</td>
+          <td><div class="progress progress-xs"><div class="progress-bar progress-bar-danger" style="width: {{ $todo->progress }}%"></div></div></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('todos.show',['todo'=>$todo->id]) }}">View</a></td>
+        </tr>
+        @endforeach
+        
         <tr>
           <td>1.</td>
           <td>Update software</td>
@@ -33,6 +43,7 @@
     </table>
   </div>
 </div>
+<a href="{{ route('todos.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('js')
