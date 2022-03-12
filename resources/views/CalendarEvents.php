@@ -1,42 +1,38 @@
 @extends('adminlte::page')
 
-@section('title', 'To Do List')
+@section('title', 'Calendar')
 
 @section('content_header')
-    <h1>To Do's</h1>
+    <h1>Calendar</h1>
 @stop
 
 @section('content')
-<div class="card">
-  <div class="card-body">
-    <table id="table" class="table table-bordered">
-      <thead>
-        <tr>
-          <th style="width: 10px">#</th><th>Task</th><th>Progress</th><th style="width: 40px">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        @foreach($todos AS $todo)
-        <tr>
-          <td>{{ $todo->id }}</td>
-          <td>{{ $todo->title }}</td>
-          <td><div class="progress progress-xs"><div class="progress-bar progress-bar-danger" style="width: {{ $todo->progress }}%"></div></div></td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('todos.show',['todo'=>$todo->id]) }}">View</a></td>
-        </tr>
-        @endforeach
-
-      </tbody>
-    </table>
+<a href="{{ route('calendarevents.create') }} " class="btn btn-primary" >Create</a>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-primary">
+      <div class="card-body p-0">
+        <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<a href="{{ route('eventslist.create') }} " class="btn btn-primary" >Create</a>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css">
 @stop
 
 @section('js')
+<script src="//cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" ></script>
 <script>
-    $(document).ready(function() {
-        $('#table').DataTable();
-    } );
+$( document ).ready(function() {
+    var calendar = new FullCalendar.Calendar($('#calendar')[0], {
+      initialView: 'dayGridMonth',
+      events: '/calendarevents'
+    });
+    calendar.render();
+})
 </script>
 @stop
