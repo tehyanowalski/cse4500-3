@@ -13,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('todos', function (Blueprint $table) {
+        Schema::create('CalendarEvents', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('title');
+            $table->dateTime('call');
+            $table->dateTime('close');
         });
     }
 
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('todos');
+        Schema::dropIfExists('CalendarEvents');
     }
 };
