@@ -35,7 +35,7 @@ class CalendarEventsController extends Controller
              'close' => date($request->close)
         ]);
 
-        return $this->('/calendarevents');
+        return redirect('/calendarevents');
     }
 
     public function show($id)
