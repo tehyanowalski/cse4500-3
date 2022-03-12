@@ -3,21 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Todo;
+use App\Models\CalendarEvents;
 
-class TodoController extends Controller
+class CalendarEventsController extends Controller
 {
 
     public function index()
     {
-        $todos = Todo::all();
-        return view('todos',compact('todos'));
+        $events = CalendarEvents::select('title', 'call AS start', 'close AS end')->get();
+        return view('calendarevents',compact('calendarevents'));
     }
 
 
     public function create()
     {
-        return view('todos.create');
+        return view('calendarevents.create');
     }
 
 
@@ -25,21 +25,22 @@ class TodoController extends Controller
     {
         $validated = $request->validate([
              'title' => 'required',
-             'progress' => 'required',
+             'call' => 'required',
+             'close' => 'required',
         ]);
 
-        $todo = Todo::create([ 
+        $calendarevents = CalendarEvents::create([ 
              'title' => $request->title, 
-             'progress' => $request->progress, 
+             'call' => date($request->call),
+             'close' => date($request->close)
         ]);
 
-        return $this->index();
+        return $this->('/calendarevents');
     }
 
     public function show($id)
     {
-        $todo= Todo::find($id); 
-        return view('todos.show',compact('todo'));
+        //
     }
 
 
