@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\CalendarEventsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,7 @@ Route::get('/db_migrate', function () {
 });
 
 Route::resource('/todos', TodoController::class);
+Route::resource('/calendarevents', CalendarEventsController::class);
 
 Route::fallback(function () {
     return view('fallback');
