@@ -30,7 +30,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('todos.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('eventslist.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('js')
